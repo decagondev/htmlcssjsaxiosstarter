@@ -1,0 +1,75 @@
+// CREATE
+endpoint:         /contacts
+verb:             POST
+description:      Post a new contact to the database based on the JSON object provided and return a JSON object with a generated ID back to the client
+query:            { 
+                    name: "Dave Smith",
+                    email: "dave@decadev.co.uk",
+                    address: "3 Kensington road, London. NW2 5LA.",
+                    phone_numbers: ["01915553423", "07776886445"]
+                  }
+
+result (example): { 
+                    id: "fed0-e00a-dd00-faaf-e1de-065f",
+                    name: "Dave Smith",
+                    email: "dave@decadev.co.uk",
+                    address: "3 Kensington road, London. NW2 5LA.",
+                    phone_numbers: ["01915553423", "07776886445"]
+                  }
+
+
+// READ
+endpoint:         /contacts
+verb:             GET
+description:      Get all contacts from the database and present them as a list of JSON objects
+query:            NONE
+result (example): [
+                    { id: "fed0-e0da-0000-ffff-efde-065f",
+                      name: "Tom Tarpey",
+                      email: "tom@decadev.co.uk",
+                     address: "31 Hurlingham road, Birmingham. B44 0PL.",
+                       phone_numbers: ["01213453423", "07986456345"]
+                     },
+                     {
+                           id: "fed0-000a-feed-ffaf-2fde-065f",
+                           name: "Bob Jones",
+                           email: "bob@decadev.co.uk",
+                           address: "1 Lisgard road, Liverpool. L12 7AP.",
+                           phone_numbers: ["01514563321", "07746466909"]
+                     }
+                   ]
+
+endpoint:         /contacts/{id}
+verb:             GET
+description:      Get a contact from the database based on the id provided and present it as a JSON object
+query:            fed0-e0da-0000-ffff-efde-065f
+result (example): { 
+                    id: "fed0-e0da-0000-ffff-efde-065f",
+                    name: "Tom Tarpey",
+                    email: "tom@decadev.co.uk",
+                    address: "31 Hurlingham road, Birmingham. B44 0PL.",
+                    phone_numbers: ["01213453423", "07986456345"]
+                  }
+
+// UPDATE
+endpoint:         /contacts/{id}
+verb:             PUT
+description:      Edit a contact based on the id and JSON object provided and return a string denoting the contact has been updated aling with the id to the client
+query in address: fed0-e00a-dd00-faaf-e1de-065f
+query in body:    { 
+                    id: "fed0-e00a-dd00-faaf-e1de-065f",
+                    name: "Dave Smith",
+                    email: "dave.smith@decadev.co.uk",
+                    address: "3 Kensington road, London. NW2 5LA.",
+                    phone_numbers: ["01915553423", "07776886445"]
+                  }
+
+result (example): "The contact was updated successfully: fed0-e00a-dd00-faaf-e1de-065f"
+
+// DELETE
+endpoint:         /contacts/{id}
+verb:             DELETE
+description:      Edit a contact based on the id and JSON object provided and return a string denoting the contact has been updated aling with the id to the client
+query in address: fed0-e00a-dd00-faaf-e1de-065f
+
+result (example): "The contact was deleted successfully: fed0-e00a-dd00-faaf-e1de-065f"

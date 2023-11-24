@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js" defer></script>
+    <title>Contact FrontEnd</title>
+</head>
+<body>
+    <div class="container">
+        <header class="ui main">
+            <div class="ui fixed menu">
+                <div class="ui container center">
+                    <h2>Contact Manager</h2>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+            <div class="main-heading">
+                <h2>Add Contact</h2>
+                <form class="ui form" id="contact-form">
+                    <div class="field">
+                        <label>Name</label>
+                        <input 
+                            id="contactName"
+                            type="text" 
+                            name="name"
+                            placeholder="Name" />
+                    </div>
+                    <div class="field">
+                    <label>Email</label>
+                    <input 
+                        id="contactEmail"
+                        type="text" 
+                        name="email"
+                        placeholder="Email" />
+                    </div>
+                    <div class="field">
+                        <label>Address</label>
+                        <input 
+                            id="contactAddress"
+                            type="text" 
+                            name="address"
+                            placeholder="Address" />
+                    </div>
+                    <div class="field">
+                        <label>Avatar</label>
+                        <input
+                            id="contactAvatar" 
+                            type="text" 
+                            name="avatar"
+                            placeholder="URL of your avatar picture" />
+                    </div>
+                    <div class="field">
+                        <label>Phone Numbers</label>
+                        <input 
+                            id="contactNumbers"
+                            type="text" 
+                            name="numbers"
+                            placeholder="Comma Seperated list of phone numbers" />
+                    </div>
+                    
+                    <button class="ui button blue">Add</button>
+                </form>
+                <h2>Contact List</h2>
+                <!-- PHASE 1: Add your div tag here with atributes class of "ui celled list" and an id of "contacts" -->
+                <div class="ui celled list" id="contacts"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

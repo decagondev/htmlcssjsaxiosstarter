@@ -1,0 +1,21 @@
+.phone {
+ margin-top: 7px;
+ margin-bottom: 7px;
+ font-size: 14px;
+ font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+.centered {
+    text-align: center;
+}

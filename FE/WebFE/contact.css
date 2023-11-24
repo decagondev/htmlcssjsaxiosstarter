@@ -1,0 +1,78 @@
+/* 
+    Now that you have got your feet wet in the main.css file, you will notice a pattern to the rule sets. 
+    Lets make a few more rules to get the .contact-card looking how we want it.
+
+    give the .contact-card class selector the rules:
+
+    - flex-direction of column
+    - a border with 1px solid lightgray
+    - width of 400px
+    - and a border-radius of 1em
+    - padding of 5px
+
+    give the ul selector the rules:
+
+    - list-style-type of none
+    - padding of 0
+    - margin of 10px 5px
+    
+
+*/
+
+
+.main {
+    margin-top: 5em;
+}
+
+h2 {
+    text-align: center;
+}
+  
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.item {
+    padding: 15px 0px !important;
+}
+
+.image {
+    border: 2px solid gray;
+    border-radius: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 5px
+}
+
+li {
+    text-align: center;
+    padding: 1px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    margin: 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    width: 400px;
+    border-radius: 1em;
+    padding: 5px;
+}
+
+  

@@ -1,0 +1,60 @@
+/* 
+ you will need to add some css styles in to this file to help the index.html look as it should. 
+ remember that we want the app to look close to the design file. 
+ There are several types of css rules that you can follow.
+
+ css syntax is as follows...
+
+ you have the "selector" this is a hook that allows us to connect a rule to a piece of html markup. 
+ This can be an actual Element such as a h1 tag or div tag or p tag, or it can be a class such as .main or .wrapper
+ it can even be an id such as #content or #my_image
+
+ Then you have a block denoted by curley braces { } inside the block is where we have the rules associated with the
+ selector.
+
+ The rules are a bunch of key value pairs ending with a semicolon for each rule such as display: block; or
+ color: red;
+
+ so lets put them together to give an example...
+
+ h1 {
+  color: green;
+  border: 1px solid red;
+ }
+
+ This example would tell all h1 tags on the page to have a text color of green and 
+ a border around them that is 1 pixel wide that is solid and colored red.
+
+ now that we have gone over the basic shape of a css selector and set of rules, you can try for yourself...
+
+ - in the .main class selector add the rule to give a margin-top of 55px
+ - in the .ui.search input selector add the rule width of 90%
+ - add a new selector of .center class and add the rules of justify-content center to it and padding of 10px
+*/
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    text-align: center;
+    margin-top: 55px;
+
+}
+
+.ui.search input {
+  border-radius: 0 !important;
+  width: 90%;
+}
+
+.center {
+  justify-content: center;
+  padding: 10px;
+
+}
+  
+
+  
+  

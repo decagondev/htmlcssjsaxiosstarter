@@ -1,0 +1,7 @@
+// contact Table
+ - id : String
+ - name : String
+ - email : String
+ - address : String
+ - avatar : String
+ - phone_numbers : List of Strings
